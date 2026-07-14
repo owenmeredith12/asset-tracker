@@ -1,65 +1,131 @@
-import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <main className="min-h-screen bg-slate-100">
+      <div className="mx-auto max-w-6xl px-6 py-16">
+
+        <section className="overflow-hidden rounded-3xl bg-slate-900 text-white shadow-xl">
+          <div className="p-10 md:p-16">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-blue-300">
+              CSE 310 • Cloud Database Project
+            </p>
+
+            <h1 className="text-5xl font-bold tracking-tight">
+              Cloud Asset Tracker
+            </h1>
+
+            <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">
+              The Cloud Asset Tracker is a web application built with
+              <span className="font-semibold text-white"> Next.js </span>
+              and
+              <span className="font-semibold text-white"> MongoDB Atlas </span>
+              that allows an organization to keep track of company equipment.
+              Users can create, update, view, and delete asset records while
+              assigning assets to employees.
+            </p>
+
+            <div className="mt-10 flex flex-wrap gap-4">
+              <Link
+                href="/assets"
+                className="rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white transition hover:bg-blue-700"
+              >
+                View Assets
+              </Link>
+
+              <Link
+                href="/employees"
+                className="rounded-xl border border-slate-600 px-6 py-3 font-semibold text-white transition hover:bg-slate-800"
+              >
+                Manage Employees
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        <section className="mt-10 grid gap-6 md:grid-cols-3">
+
+          <div className="rounded-2xl bg-white p-6 shadow-sm">
+            <div className="mb-4 text-4xl">💻</div>
+
+            <h2 className="text-xl font-bold">
+              Track Assets
+            </h2>
+
+            <p className="mt-3 text-slate-600">
+              Store information about laptops, desktops, monitors, phones,
+              printers, and other company devices in a cloud database.
+            </p>
+          </div>
+
+          <div className="rounded-2xl bg-white p-6 shadow-sm">
+            <div className="mb-4 text-4xl">👥</div>
+
+            <h2 className="text-xl font-bold">
+              Manage Employees
+            </h2>
+
+            <p className="mt-3 text-slate-600">
+              Create employee records and assign company equipment to individual
+              employees for easy tracking.
+            </p>
+          </div>
+
+          <div className="rounded-2xl bg-white p-6 shadow-sm">
+            <div className="mb-4 text-4xl">☁️</div>
+
+            <h2 className="text-xl font-bold">
+              Cloud Database
+            </h2>
+
+            <p className="mt-3 text-slate-600">
+              All information is stored securely in MongoDB Atlas, demonstrating
+              full Create, Read, Update, and Delete (CRUD) functionality.
+            </p>
+          </div>
+
+        </section>
+
+        <section className="mt-10 rounded-2xl bg-white p-8 shadow-sm">
+          <h2 className="text-2xl font-bold">
+            Features
+          </h2>
+
+          <div className="mt-6 grid gap-4 md:grid-cols-2">
+
+            <div className="rounded-xl bg-slate-50 p-5">
+              <h3 className="font-semibold">✔ Asset Management</h3>
+              <p className="mt-2 text-slate-600">
+                Add, edit, delete, and view company assets.
+              </p>
+            </div>
+
+            <div className="rounded-xl bg-slate-50 p-5">
+              <h3 className="font-semibold">✔ Employee Management</h3>
+              <p className="mt-2 text-slate-600">
+                Maintain employee records for assigning equipment.
+              </p>
+            </div>
+
+            <div className="rounded-xl bg-slate-50 p-5">
+              <h3 className="font-semibold">✔ Asset Assignment</h3>
+              <p className="mt-2 text-slate-600">
+                Link assets to employees using related MongoDB collections.
+              </p>
+            </div>
+
+            <div className="rounded-xl bg-slate-50 p-5">
+              <h3 className="font-semibold">✔ MongoDB Atlas</h3>
+              <p className="mt-2 text-slate-600">
+                Uses a cloud-hosted NoSQL database with REST API endpoints for
+                CRUD operations.
+              </p>
+            </div>
+
+          </div>
+        </section>
+
+      </div>
+    </main>
   );
 }
