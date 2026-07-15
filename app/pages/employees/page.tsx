@@ -2,6 +2,7 @@
 
 import { FormEvent, useEffect, useState } from "react";
 
+//defining employee data
 type Employee = {
   _id: string;
   name: string;
@@ -10,6 +11,7 @@ type Employee = {
 };
 
 export default function EmployeesPage() {
+  //define employee data variables used for employees page
   const [employees, setEmployees] = useState<Employee[]>([]);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -18,6 +20,7 @@ export default function EmployeesPage() {
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
 
+  //loads employee data
   async function loadEmployees() {
     try {
       setLoading(true);
@@ -83,6 +86,7 @@ export default function EmployeesPage() {
     }
   }
 
+  //splices initials out of the employee name data
   function getInitials(employeeName: string) {
     return employeeName
       .split(" ")
@@ -92,6 +96,7 @@ export default function EmployeesPage() {
       .toUpperCase();
   }
 
+  //return the actual page content
   return (
     <main className="min-h-screen bg-slate-100 px-4 py-8 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-6xl space-y-8">

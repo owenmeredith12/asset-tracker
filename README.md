@@ -5,10 +5,11 @@ track of all of the various items we have. This is handled with a mongodb databa
 and an employees table. The assets table references the employees table by having assets be assigned to specific 
 individuals}
 
-[Software Demo Video](https://youtu.be/Q3OULKSMgjQ)
+[Software Demo Video](https://youtu.be/E-X_SoLvt3U)
 
 # Development Environment
 
 {I used Next.js for the project and it is hosted on Vercel. It is also connected to a mongodb database}
 
 # Useful Websites
+https://github.com/owenmeredith12/asset-tracker

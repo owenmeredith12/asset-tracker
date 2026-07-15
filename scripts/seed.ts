@@ -1,3 +1,5 @@
+// script to seed the database with necessary data
+
 import clientPromise from "../lib/mongodb";
 
 async function seedDatabase() {
