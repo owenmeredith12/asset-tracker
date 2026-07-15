@@ -1,6 +1,7 @@
 import clientPromise from "@/lib/mongodb";
 import { NextResponse } from "next/server";
 
+//get route for employees
 export async function GET() {
   try {
     const client = await clientPromise;
@@ -23,6 +24,7 @@ export async function GET() {
   }
 }
 
+//post route for employees
 export async function POST(request: Request) {
   try {
     const body = await request.json();

@@ -8,6 +8,7 @@ type RouteContext = {
   }>;
 };
 
+//put route for specific asset
 export async function PUT(request: Request, context: RouteContext) {
   try {
     const { id } = await context.params;
@@ -78,6 +79,7 @@ export async function PUT(request: Request, context: RouteContext) {
   }
 }
 
+//delete route for specific asset
 export async function DELETE(_request: Request, context: RouteContext) {
   try {
     const { id } = await context.params;

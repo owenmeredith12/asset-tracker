@@ -12,7 +12,7 @@ export default function Home() {
             </p>
 
             <h1 className="text-5xl font-bold tracking-tight">
-              Cloud Asset Tracker
+              Cloud Database Asset Tracker
             </h1>
 
             <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">
@@ -27,14 +27,14 @@ export default function Home() {
 
             <div className="mt-10 flex flex-wrap gap-4">
               <Link
-                href="/assets"
+                href="/pages/assets"
                 className="rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white transition hover:bg-blue-700"
               >
                 View Assets
               </Link>
 
               <Link
-                href="/employees"
+                href="/pages/employees"
                 className="rounded-xl border border-slate-600 px-6 py-3 font-semibold text-white transition hover:bg-slate-800"
               >
                 Manage Employees

@@ -1,3 +1,5 @@
+//connection to db 
+
 import { MongoClient, ServerApiVersion } from "mongodb";
 
 const uri = process.env.DB_URL;

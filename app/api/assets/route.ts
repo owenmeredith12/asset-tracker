@@ -2,6 +2,7 @@ import clientPromise from "@/lib/mongodb";
 import { NextResponse } from "next/server";
 import { ObjectId } from "mongodb";
 
+//get route for assets
 export async function GET() {
   try {
     const client = await clientPromise;
@@ -43,6 +44,7 @@ export async function GET() {
   }
 }
 
+//post route for assets
 export async function POST(request: Request) {
   try {
     const body = await request.json();
